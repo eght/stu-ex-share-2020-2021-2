@@ -1,0 +1,3472 @@
+%%% 8653513F-1D36-415A-AB62-83899679B30F.tex ---
+%%
+%% Filename: 8653513F-1D36-415A-AB62-83899679B30F.tex
+%% Description: rpd-001
+%% usage:
+%%        0. C:\cygwin64\bin\mintty.exe -i /Cygwin-Terminal.ico -
+%%        0. "C:\Program Files (x86)\Everything\Everything.exe"
+%%        1. cd /cygdrive/f/git/secret/o/oo/oop/oopc/001/
+%%        2. /cygdrive/c/texlive/2020/bin/win32/xelatex.exe 8653513F-1D36-415A-AB62-83899679B30F.tex
+%%        3. /cygdrive/c/texlive/2020/bin/win32/bibtex.exe 8653513F-1D36-415A-AB62-83899679B30F.aux
+%% Author: Gao, LiHui
+%% Maintainer:
+%% Created: Sat Jan 12 16:17:52 2019 (+0800)
+%% Version:
+%% Package-Requires: ()
+%% Last-Updated: Mon Jan  4 10:47:53 2021 (+0800)
+%%           By: Administrator
+%%     Update #: 2425
+%% URL:
+%% Doc URL:
+%% Keywords:
+%% Compatibility:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% setting-001
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% setting-002
+% 中英文论文模板
+% 对xelatex的中英文设置不同的字体
+% XeTeX处理中文非常方便，不需要任何设置，
+% 就能够使用系统中安装的TrueType和OpenType字体
+% [website][https://www.cnblogs.com/tenderwx/p/6920283.html]
+% date: Sun Nov 04 21:39:43 China Standard Time 2018
+% version: 1.00
+% effect: article
+% usage: XeLaTeX -> BiBTeB -> XeLaTeX
+%%%%%%%%%%%%%%%%%
+% text editor:
+% WinEdt 10.2
+% Build: 20170413  (v. 10.2) - 64-bit
+%%%%%%%%%%%%%%%%%
+% This is XeTeX, Version 3.14159265-2.6-0.99999
+% (TeX Live 2018/W32TeX)
+% (preloaded format=xelatex)
+%%%%%%%%%%%%%%%%%%%%%%%% setting-003
+% 下面是常用字体名称：
+% %%%%%
+% STCaiyun,华文彩云:style=Regular
+% YouYuan,幼圆:style=Regular
+% STHupo,华文琥珀:style=Regular
+% FZYaoTi,方正姚体:style=Regular
+% NSimSun,新宋体:style=Regular
+% FangSong,仿宋:style=Regular,Normal,…
+% KaiTi,楷体:style=Regular,Normal,obyčejné,Standard,...
+% Microsoft YaHei,微软雅黑:style=Regular,Normal,obyčejné,…
+% SimSun,宋体:style=Regular
+% STFangsong,华文仿宋:style=Regular
+% STXinwei,华文新魏:style=Regular
+% Arial Unicode MS:style=Regular,Normal,obyčejné,Standard,…
+% STXingkai,华文行楷:style=Regular
+% STLiti,华文隶书:style=Regular
+% SimHei,黑体:style=Regular,Normal,…
+% Adobe Heiti Std R,Adobe Heiti Std,Adobe 黑体 Std,
+%             Adobe 黑体 Std R:style=Regular,R
+%%
+% STZhongsong,华文中宋:style=Regular
+% Microsoft YaHei,微软雅黑:style=Bold,Negreta,tučné,fed,Fett,…
+% FZShuTi,方正舒体:style=Regular
+% Adobe Song Std L,Adobe Song Std,Adobe 宋体 Std,
+%                  Adobe 宋体 Std L:style=Regular,L
+%%
+% STXihei,华文细黑:style=Regular
+% LiSu,隶书:style=Regular
+% STKaiti,华文楷体:style=Regular
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% setting-004
+\documentclass[a4paper,10pt]{article} %% for draft
+%\documentclass[a4paper,12pt]{article}
+\usepackage{xeCJK}
+\usepackage{fontspec}
+\usepackage{amsmath}
+%\setCJKmainfont{Microsoft YaHei} %% 设置CJK主字体，也就是设置\rmfamily的CJK字体
+%\setCJKsansfont{} %% 设置CJK无衬线的字体，也就是设置\sffamily的CJK字体
+%\setCJKmonofont{WenQuanYi Micro Hei Mono} %% 设置CJK的等宽字体，也就是设置\ttfamily的CJK字体
+%\setCJKmainfont{KaiTi}
+%\setCJKmainfont{FangSong}
+%\setCJKmonofont{SimSun}
+%\setmainfont{DejaVu Sans Mono}
+%%%%%%%%%……剩下的包，随你加
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{graphicx} %% insert picture
+\usepackage{color,xcolor} %% 字体颜色
+\usepackage{lineno} %% 加行号，添加lineno包
+\usepackage{listings} %% 加行号
+\usepackage{bm} %% bold face vector
+\lstset{breaklines=true}
+%\lstset{numbers=left, numberstyle=\scriptsize\ttfamily, numbersep=10pt, captionpos=b}
+%\lstset{backgroundcolor=\color{gray-5}}
+%\lstset{basicstyle=\small\ttfamily}
+\lstset{framesep=4pt}
+%%%%%%%%%%%%%%%%%%%%%% setting-005
+\usepackage{hyperref} % Package for hyperlinks
+%UTF-8 编码，Xe\LaTeX{} 编译。
+%%%%%%%%%%%%%%%%%%%% setting-006
+% \numberwithin{equation}{section} %% 公式按章节编号
+%%%%%%%%%%%%%%%%%%% setting-007
+% \usepackage{geometry} %% 调整页边距
+% \geometry{a4paper,left=5cm,right=5cm,top=3cm,bottom=3cm} %% 单独调整
+% \geometry{a4paper,left=4.5cm,right=4.5cm,top=2.5cm,bottom=2.5cm} %% 单独调整
+% \geometry{a4paper,left=3.5cm,right=3.5cm,top=2.5cm,bottom=2.5cm} %% 单独调整
+% \geometry{a4paper,scale=0.8} %% 整体调整
+%%%%%%%%%%%%%%%%%%%% setting-008
+\usepackage{authblk} %% 定义多个作者，地址，通讯邮箱
+%%%%%%%%%%%%%%%%%%%% setting-009
+%%%%
+ \usepackage{showkeys} %% 标签太多了，都增知道哪个是哪个了，显示标签名就清楚了
+% \usepackage[notref,notcite]{showkeys} %% 取消引用处的标签名
+\usepackage[marginal]{showlabels}
+%%%%
+%%%%%%%%%%%%%%%%%%%% setting-010
+%%%%
+\usepackage[dvips=false,pdftex=false,vtex=false]{geometry}
+\geometry{
+%  paperwidth=6in,
+%  paperheight=9in,
+%  margin=2em,
+%  bottom=1.5em,
+%  nohead
+} %% a4 size = 8.3 in x 11.7 in, Letter size = 8.5in x 11in, 1in = 2.54cm
+%% %% %% %% \usepackage[cam,a4,center,dvips]{crop} %% 裁切标记，套准标记，颜色条，页面信息, 裁剪标记Crop Mark, 就是给印刷厂裁剪纸张用的.
+\usepackage[cam,a4,center,dvips]{crop} %% 裁切标记，套准标记，颜色条，页面信息, 裁剪标记Crop Mark, 就是给印刷厂裁剪纸张用的.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 为打印准备图稿时，打印设备需要几种标记来精确套准图稿元素并校验正确的颜色.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% http://blog.sina.com.cn/s/blog_5e16f177010172py.html
+%%%%
+%%%%%%%%%%%%%%%%%%%% setting-011
+%%%%
+\usepackage{indentfirst} %%  段落缩进
+\setlength{\parindent}{2em} %% 段落缩进，2em表示两个汉字
+%%%%
+%%%%%%%%%%%%%%%%%%%% setting-012
+%%%%
+%%%% %%%% %%%% \usepackage{lineno} %% 加入行号
+%%%% %%%% %%%% %%%% \linenumbers %% 在开始需要标号的位置加入行号，这个是针对单行的，并且公式是不会标记行号的，还有\nolinenumber为结束行号
+%%
+%% \usepackage[switch]{lineno}
+%% \linenumbers %% 这个是针对杂志的投稿要求，需要是双栏，双栏文本使行号位于两侧，即页变位置
+%%%%
+%%%%%%%%%%%%%%%%%%%% setting-013
+%%%%
+\usepackage{pdfpages}
+%% Inserting a PDF file in Latex
+%% https://stackoverflow.com/questions/2739159/inserting-a-pdf-file-in-latex
+%%  %% ex-1
+%% \includegraphics[scale=0.75,page=2]{multipage.pdf}
+%%  %% ex-2
+%% \begin{figure}[htp] \centering{
+%% \includegraphics[scale=0.75]{sampaper.pdf}}
+%% \caption{Experiment 2}
+%% \end{figure}
+%% %% ex-3
+%% \includepdf[pages={1,3,5}]{myfile.pdf}
+%% %% ex-4
+%% \includepdf[pages={11-12}]{myfile.pdf}
+%%%%
+%%%%%%%%%%%%%%%%%%%% setting-013+1
+%%%%
+\usepackage{enumerate}
+%%%%
+%%%%%%%%%%%%%%%%%%%% setting-013+1
+%%%%
+\usepackage{multirow}  %% 多行合并的宏包
+\usepackage{makecell}  %% thead{对齐方式}{列名称} %% 专门处理表头
+\usepackage{threeparttable} %% 给表格添加注释
+%% \usepackage{tablefootnote} %% 给表格添加注释
+%%%%%%%%%%%%%%%%%%%%
+%%%% oiint
+\newcommand{\oiint}{\,\bigcirc\kern -17.3pt\int\kern -7.5pt\int}
+%%%%
+%%%%%%%%%%%%%%%%%%%% setting-013+1
+\title{高等数学1-2
+  %\thanks{Ex001 - Ex177}
+}
+%%%% setting-014 五个作者，一个作者对应两个工作单位
+%% from: https://blog.csdn.net/robert_chen1988/article/details/79187224
+%\author[ab]{Lihui Gao \thanks{lhgao1@gzu.edu.cn}} %%使用\thanks{}定义通讯作者
+\author{}
+%%%%
+%%%%%%%%%%%%%%%%%%%% setting-015
+%%%%
+\date{\today} %省略的时候自动使用当前日期
+% \date{} %如果{}为空不显示日期
+%%%%
+%%%%%%%%%%%%%%%%%%%% setting-016 设定参考文献的格式
+%%%%
+\bibliographystyle{plain}
+%%%%
+%%%%%%%%%%%%%%%%%%%% setting-017 正文开始
+\begin{document}
+%your content
+%%%%%%%%%%%%%%%%%%% setting-018 内容目录
+\maketitle
+%% \section{}
+% \noindent
+%% \newpage
+%%%%%%%%%%%%%%%%%%
+\par\vspace{1em}
+%\begin{abstract}
+%练习册
+%\end{abstract}
+%%%%%%%%%%
+%% \tableofcontents
+%% 
+%\section{上册}
+
+%\section{下册练习}
+
+%%%%%%%%%%%%%%%%
+%% \newpage
+%%     \begin{center}
+%%         \quad \\
+%%         \quad \\
+%%         \fontsize{45}{17} 毕\quad 业\quad 论\quad 文
+%%         \vskip 3.5cm
+%%         \large 在此打印论文题目，二号黑体  
+%%     \end{center}
+%%     \vskip 3.5cm
+%% 
+%%     \begin{quotation}
+%%         \fontsize{15}{15}
+%%         \par\setlength\parindent{12em}
+%%         \quad 
+%% 
+%%         学\hspace{0.61cm} 院：\underline{共产主义学院\quad}
+%% 
+%%         专\hspace{0.61cm} 业：\underline{计算机科学技术}
+%% 
+%%         学生姓名：\underline{\qquad 德彪西\qquad }
+%% 
+%%         学\hspace{0.61cm} 号：\underline{\quad 00000000000\quad}
+%% 
+%%         指导教师：\underline{\qquad 傅里叶 \qquad}
+%%         \vskip 2cm
+%%         \centering
+%%         2019年**月**日
+%%     \end{quotation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+        
+        \vspace*{34pt}
+        %\vspace*{64pt}
+        \begin{center}
+            \fontsize{44pt}{0} 《\quad 高\quad 等\quad 数\quad 学\quad 》\\
+            %\fontsize{48pt}{0} 贵州大学\\
+            \vspace*{36pt}\par
+            %\fontsize{36pt}{0}{课\quad 程\quad 报\quad 告}\\
+            \fontsize{36pt}{0}{练\quad 习\quad 册}\\
+            \vspace*{48pt}
+            \LARGE（\quad2020\quad~$\thicksim$~\quad 2021\quad~学年度\quad \quad 第\quad 2\quad 学期\quad）\\
+            %\fontsize{24pt}{0}（2020~$\thicksim$~2021~学年度\quad 第\,\,2\,\,学期）\\
+            \vspace*{48pt}
+
+            \LARGE 课\,\,程\,\,名\,\,称\ \ \underline{\makebox[200pt]{高\,\,等\,\,数\,\,学\,\,1\,\,-\,\,2}}\\
+            \vspace*{72pt}
+
+            %\Large 姓名\ \ \underline{\makebox[168pt]{kurrr}}\\\vskip 0.6cm
+            \Large 姓\,\,名\ \ \underline{\makebox[168pt]{ }}\\\vskip 1.5cm
+            \Large 学\,\,号\ \ \underline{\makebox[168pt]{}}\\\vskip 1.5cm
+            %\Large 学号\ \ \underline{\makebox[168pt]{2019XXXXXXX}}\\\vskip 0.6cm
+            \Large 学\,\,院\ \ \underline{\makebox[168pt]{}}\\\vskip 1.5cm
+            %\Large 学院\ \ \underline{\makebox[168pt]{XXXXXXXXX}}\\\vskip 0.6cm
+            \Large 教\,\,师\ \ \underline{\makebox[168pt]{ }}\\
+            %\Large 教师\ \ \underline{\makebox[168pt]{XXX}}\\
+        \end{center}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%\hspace{0.25\linewidth}
+\framebox{%
+  \begin{minipage}{0.25\linewidth}
+\quad \quad \quad\par
+\quad \quad \quad\par\quad \quad \quad\par
+    \quad \quad \quad\par\quad \quad \quad\par\quad \quad \quad\par
+\quad \quad \quad \quad 免冠照
+\quad \quad \quad\par
+\quad \quad \quad\par\quad \quad \quad\par
+\quad \quad \quad\par
+\quad \quad \quad\par\quad \quad \quad\par
+  \end{minipage}}
+%
+%%--
+\quad
+\begin{tabular}{|c|l|}
+	\hline
+     \quad  & \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad  \\
+	\quad & \quad \\
+	\quad & \quad \\
+	\quad 梦想\quad\quad& \quad \\
+	\quad & \quad \\
+	\quad & \quad \\ 
+	\hline \hline
+	\quad & \quad \\
+	\quad & \quad \\
+	\quad 困难\quad\quad & \quad \\
+	\quad & \quad \\
+     \quad & \quad \\
+	\hline
+\end{tabular}
+
+\vskip 7em
+%% \section{练习}
+\large
+%%%%------------------
+%%%%------------------ 练习题 
+\setcounter{section}{6}
+%\setcounter{section}{1}
+%%%%------------------
+%%%%------------------ 练习题 
+
+\section{第七章\quad 微分方程}
+\subsection{第一节\quad 微分方程的基本概念}
+\subsubsection{知识点}
+\subsubsection{练习题}
+%% \subsubsection{竞赛题}
+%% \subsubsection{考研题}
+%% %%
+% \paragraph{a}
+% \subparagraph{a}
+% \paragraph{a}
+% \subparagraph{a}
+
+
+%% 
+
+\vskip 0.01\textheight
+\par\noindent \textbf{001} \quad 已知曲线上点$P(x,y)$处的法线与$x$轴交点为$Q$, 
+且线段$PQ$被$y$轴平分， 求该曲线所满足的微分方程。 
+\par\noindent \textbf{解答}
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.34271\textheight
+
+\par\noindent \textbf{003} \quad 函数$y=3\,e\,^{2\,x}$是微分方程$y\,''-4y=0$的\hfil (\quad\quad\quad)%什么解？
+\par\noindent \textbf{A} \quad  通解
+\par\noindent \textbf{B} \quad  特解
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\newpage
+\par\noindent \textbf{004} \quad 微分方程
+$$
+xy\,'''+2y\,''+x^2y=0
+$$
+的阶数为\hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad  1
+\par\noindent \textbf{B} \quad  2
+\par\noindent \textbf{C} \quad  3
+\par\noindent \textbf{D} \quad  4
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{005} \quad 微分方程
+$$L\frac{d\,^2Q}{d\,t\,^2}+R\frac{d\,Q}{d\,t}+\frac{Q}{c}=0$$
+的阶数为\hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad  1
+\par\noindent \textbf{B} \quad  2
+\par\noindent \textbf{C} \quad  3
+\par\noindent \textbf{D} \quad  4
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{006} \quad 微分方程
+$$\frac{d\,\rho}{d\,\theta}+\rho=\sin^2\theta$$
+的阶数为\hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad  1
+\par\noindent \textbf{B} \quad  2
+\par\noindent \textbf{C} \quad  3
+\par\noindent \textbf{D} \quad  4
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{007} \quad 一个二阶微分方程的通解应含有多少个任意常数\hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad  1
+\par\noindent \textbf{B} \quad  2
+\par\noindent \textbf{C} \quad  3
+\par\noindent \textbf{D} \quad  4
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{008} \quad 已知$y=c\,_1\sin (x-c\,_2)$, $y\,|_{x\,=\,\pi}=1$, $y\,'|_{x\,=\,\pi}=0$, 求$c\,_1, c\,_2$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{009} \quad 求函数$y=ae\,^x-be\,^{-x}+x-1$所满足的微分方程, 其中$a$, $b$为任意常数。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+% \vskip 0.44271\textheight
+% 
+\newpage
+% \par\noindent \textbf{010} \quad 设曲线上点$P(x,y)$处的法线与$x$轴的交点为$Q$, 
+% 且线段$PQ$被$y$轴平分， 
+% 求该曲线所满足的微分方程。(重复了， 修改)
+% \par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+\newpage
+\subsection{第二节\quad 可分离变量微分方程}
+\subsubsection{知识点}
+\subsubsection{练习题}
+%%%%------------------
+%%%%------------------ 练习题 
+%\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{011} \quad 求微分方程
+$$\frac{d\,y}{d\,x}+\cos \frac{x-y}{2}=\cos \frac{x+y}{2}$$
+的通解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+\newpage
+\subsection{第三节\quad 齐次方程}
+\subsubsection{知识点}
+\subsubsection{练习题}
+%%%%------------------
+%%%%------------------ 练习题 
+%\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{012} \quad 将方程
+$$\int_0^x\left[\,2y\,(t)+\sqrt{t\,^2+y\,^2(t)}\,\right] \quad dt=x\,y\,(x)$$
+化为齐将方程的形式。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{013} \quad 求方程
+$$\left(\,x\,^2+y\,^2\,\right)d\,x-x\,y\,d\,y=0$$
+的通解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{014} \quad 求齐次方程
+$$\left(\,y\,^2-3\,x\,^2\,\right)d\,y+2\,x\,y\,d\,x=0$$
+满足初始条件$y\,|_{x\,=\,0}=1$
+的特解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{015} \quad 求方程
+$$y\,' = \frac{x+y+1}{x-y-3}$$
+的通解。(D7-3齐次方程 （可化为齐次方程的方程）)
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\newpage
+\subsection{第四节\quad 一阶线性微分方程}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{016} \quad 求方程
+$$y\,^3\,d\,x+(\,2\,x\,y\,^2-1)\,d\,y = 0$$
+的通解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{017} \quad 求微分方程
+$$y\,'= \frac{1}{2}\tan ^2\,(\,x+2\,y\,)$$
+的通解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{018} \quad 求微分方程
+$$\frac{dy}{dx}+\cos \frac{x-y}{2}=\cos \frac{x+y}{2}$$
+的通解。（和差化积公式）
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\subsection{第五节\quad 可降阶高阶微分方程}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{019} \quad 求微分方程
+$$y\, '' = x+\sin x$$
+的通解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{020} \quad 求微分方程
+$$y\, '' = y\,' + x$$
+的通解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{021} \quad 求微分方程
+$$y\,^3y\, ''+1 = 0$$
+满足初始条件
+$y\,|_{x\,=\,1}=1$, $y\,'|_{x\,=\,1}=0$
+的特解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{022} \quad 求微分方程
+$$y\,'' = 3\,\sqrt{y}$$
+满足初始条件
+$y\,|_{x\,=\,0}=1$, $y\,'|_{x\,=\,0}=2$
+的特解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{023} \quad 求微分方程
+$$y\,'' = e\,^{2x}-\cos x$$
+满足初始条件
+$y\,|_{x\,=\,0}=0$, $y\,'|_{x\,=\,0}=1$
+的特解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{024} \quad 求方程
+$$\left(1+x\,^2\right)\,\frac{d\,^2y}{d\,x\,^2}-2\,x\,\frac{d\,y}{d\,x}=0$$
+的通解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\subsection{第六节\quad 高阶线性微分方程}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{025} \quad 方程
+$$\frac{d\,^2y}{d\,x\,^2}+P(x)\frac{d\,y}{d\,x}+Q(x)\,y=0$$
+为\hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad 二阶非齐次线性微分方程
+\par\noindent \textbf{B} \quad 二阶齐次线性微分方程
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{026} \quad 函数
+$$y_1(x)=\sin 2x, \quad y_2(x)=6\sin x\cos x$$
+\hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad 线性相关
+\par\noindent \textbf{B} \quad 线性无关
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{027} \quad 设
+$y_1(x), \quad y_2(x)$
+是方程
+$$\frac{d\,^2y}{d\,x\,^2}+P(x)\frac{d\,y}{d\,x}+Q(x)\,y=0$$
+的两个线性无关的特解， 则
+$$y=C_1y_1(x)+C_2y_2(x)$$
+是该方程的
+\hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad 通解
+\par\noindent \textbf{B} \quad 特解
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{028} \quad 
+$y=C_1\cos x+C_2\sin x$
+是方程
+$$y\,''+y=0$$
+的
+\hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad 通解
+\par\noindent \textbf{B} \quad 特解
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{029} \quad 
+$y=C_1\cos x+C_2\sin x+x^2-2$
+是方程
+$$y\,''+y=x^2$$
+的
+\hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad 通解
+\par\noindent \textbf{B} \quad 特解
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{030} \quad 设$y_1^*$与$y_2^*$分别是方程
+$$y\,''+P(x)y\,'+Q(x)y=f\,_1(x)$$
+与
+$$y\,''+P(x)y\,'+Q(x)y=f\,_2(x)$$
+的特解， 则$y_1^*+y_2^*$是方程
+$$y\,''+P(x)y\,'+Q(x)y=f\,_1(x)+f\,_2(x)$$
+的
+\hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad 通解
+\par\noindent \textbf{B} \quad 特解
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{031} \quad 求方程
+$$\frac{d\,^2y}{d\,x\,^2}-\frac{1}{x}\,\frac{d\,y}{d\,x}=x$$
+的通解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{032} \quad 求方程
+$$y\,''+\frac{x}{1-x}\,y\,'-\frac{1}{1-x}\,y=x-1$$
+的通解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\subsection{第七节\quad 常系数齐次线性微分方程}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{033} \quad 设$y_1(x)=e\,^x$为齐次方程
+$$y\,''-2\,y\,'+y=0$$
+的解， 求非齐次方程
+$$y\,''-2\,y\,'+y=\frac{1}{x}\,e\,^x$$
+的通解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{034} \quad 求微分方程
+$$y\,''-2\,y\,'-3y=0$$
+的通解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\subsection{第八节\quad 常系数非齐次线性微分方程}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{035} \quad 写出二阶常系数非齐次线性微分方程的一般形式。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{036} \quad 写出方程
+$$y\,''+5\,y\,'+6\,y=3\,x\,e^{-2\,x}$$
+的特解形式。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{037} \quad 求方程
+$$y\,''-2\,y\,'-3\,y=3\,x+1$$
+的一个特解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{038} \quad 求方程
+$$y\,''-3\,y\,'+2\,y=x\,e\,^{2\,x}$$
+的一个特解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{039} \quad 求方程
+$$y\,''-3\,y\,'+2\,y=x\,e\,^{2\,x}$$
+的通解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{040} \quad 求方程
+$$y\,''+y=x+e\,^x$$
+的一个特解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%% Ex001 - Ex040
+
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{041} \quad 求方程
+$$y\,''+y=x+e\,^x$$
+的通解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{042} \quad 求方程
+$$y\,'''+3\,y\,''+3\,y\,'+y=e\,^x$$
+的通解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{043} \quad 求方程
+$$y\,''+y=4\sin x$$
+的通解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{044} \quad 求方程
+$$y\,''+y=x\cos 2x$$
+对应齐次方程的通解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{045} \quad 求方程
+$$y\,''+y=x\cos 2x$$
+的通解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{046} \quad 求方程
+$$y\,''+y\,'=2\,x\,^2 e\,^x$$
+的通解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{047} \quad 求方程
+$$y\,''+2y\,'+5y=\sin 2x$$
+的通解。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\section{第八章\quad 空间解析几何与向量代数}
+\subsection{第一节\quad 向量及运算}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{049} \quad 化简
+$$\vec{a}-\vec{b}+5\left(-\frac{1}{2}\vec{b}+\frac{\vec{b}-3\vec{a}}{5}\right)$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\subsection{第二节\quad 点积叉积}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{050} \quad 名词解释： 数量积、 向量积。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{051} \quad 已知三点$M\,(1,1,1)$, $A\,(2,2,1)$, $B\,(2,1,2)$, 求$\angle AMB$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{052} \quad 请完整叙述三个非零向量共面的充要条件。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{053} \quad 设$\vec{a}$, $\vec{b}$的夹角$\displaystyle\frac{3}{4}\pi$, 
+$|\vec{a}|=\sqrt{2}$, $|\vec{b}|=3$,
+求$\left|\,\vec{a}-\vec{b}\,\right|$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\subsection{第三节\quad 曲面方程}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{054} \quad 名词解释： 椭球面、 椭圆柱面。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{055} \quad 名词解释： 双曲抛物面、 椭圆抛物面。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{056} \quad 名词解释： 单叶双曲面、 双叶双曲面。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{057} \quad 指出下列方程
+$$x\,^2+y\,^2=9$$
+在空间解析几何中的图形。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\subsection{第四节\quad 空间曲线}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{058} \quad 写出曲线$C$\,:
+\begin{equation*}    %f(x) =
+ \begin{cases}
+    x\,^2+y\,^2+z\,^2 & =1 \\
+    x\,^2+(y-1)\,^2+(z-1)\,^2 & =1
+ \end{cases}                
+\end{equation*}
+在$xoy$面上的投影曲线方程。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\subsection{第五节\quad 平面方程}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{059} \quad 设一平面通过已知点$M_0(x_0,y_0,z_0)$, 且垂直于非零向量$\vec{n}=(A,B,C)$,
+求该平面方程。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{060} \quad 计算
+$$
+\left |\begin{array}{cccc}
+x-2 & y+1  & z-4 \\
+-3  & 4    & -6  \\
+-2  & 3    & -1 \\
+\end{array}\right|
+$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{061} \quad 名词解释： 截距式方程、 三点式方程。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{062} \quad 求通过$x$轴和点$(4,-3,-1)$的平面方程。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\newpage
+\par\noindent \textbf{063} \quad 请完整叙述两平面的位置关系。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{064} \quad 请过点$(1,1,1)$且垂直于两平面$x-y+z=7$和$3x+2y-12z+5=0$的平面方程。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\subsection{第六节\quad 空间直线}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{065} \quad 名词解释： 直线的对称式方程。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{066} \quad 写出直线
+\begin{equation*}    %f(x) =
+ \begin{cases}
+    x+y+z+1 & =0 \\
+    2x-y+3z+4 & =0
+ \end{cases}                
+\end{equation*}
+的对称式方程和参数式方程。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{067} \quad 一直线过点$A(1,2,1)$且垂直于直线
+$$ L_1: \frac{x-1}{3}=\frac{y}{2}=\frac{z+1}{1}$$
+又和直线
+$$ L_2: \frac{x}{2}=y=\frac{z}{-1}$$
+相交， 求此直线方程。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{068} \quad 求与两平面$x-4z=3$和$2x-y-5z=1$的交线平行， 且过点$(-3,2,5)$的直线方程。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{069} \quad 求直线
+$$\frac{x-2}{1}=\frac{y-3}{1}=\frac{z-4}{2}$$
+与平面
+$$2x+y+z-6=0$$
+的交点。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{070} \quad 求过点$(2,1,3)$且与直线
+$$\frac{x+1}{3}=\frac{y-1}{2}=\frac{z}{-1}$$
+垂直相交的直线方程。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{071} \quad 求直线
+\begin{equation*}    %f(x) =
+ \begin{cases}
+    x+y-z-1 & =0 \\
+    x-y+z+1 & =0
+ \end{cases}                
+\end{equation*}
+在平面
+$$x+y+z=0$$
+上的投影直线方程。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\section{第九章\quad 多元函数微分法及其应用}
+\subsection{第一节\quad 基本概念}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{072} \quad 名词解释： 内点、 外点、 边界点。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{073} \quad 设
+$$f\,(x,y)=\left(x\,^2+y\,^2\right)\,\sin \frac{1}{x\,^2+y\,^2}$$
+其中$x\,^2+y\,^2\neq 0$, 证明
+$$\lim_{x\to 0 \atop y\to 0} f\,(x,y) ​=0$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{074} \quad 
+$$f\,(x,y)=\frac{x\,y}{x\,^2+y\,^2}$$
+在点$(0,0)$处的极限\hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad 存在
+\par\noindent \textbf{B} \quad 不存在
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{075} \quad 
+$$\lim_{x\to 0 \atop y\to 0} \frac{1-\cos (x^2+y^2)}{(x^2+y^2)x^2y^2} ​
+= \quad\quad\quad\quad\quad\quad (\quad\quad\quad)$$
+\par\noindent \textbf{A} \quad $0$
+\par\noindent \textbf{B} \quad $1$
+\par\noindent \textbf{C} \quad $2$
+\par\noindent \textbf{D} \quad $\infty$
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{076} \quad 名词解释： 二重极限、 累次极限。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{077} \quad 函数
+\begin{equation*}    f(x,y) =
+ \begin{cases}
+    \displaystyle \frac{xy}{x\,^2+y\,^2}, & x\,^2+y\,^2\neq 0 \\
+    0,                  & x\,^2+y\,^2=0
+ \end{cases}                
+\end{equation*}
+在点$(0,0)$处的极限\hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad 存在
+\par\noindent \textbf{B} \quad 不存在
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{078} \quad 计算
+$$\lim_{x\to 0 \atop y\to 0} \frac{\sqrt{x\,y+1}-1}{x\,y}$$
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{079} \quad 设
+$$f\,\left(\,x\,y, \frac{y\,^2}{x}\right)=x\,^2+y\,^2$$ 
+求
+$$f\,\left(\frac{y\,^2}{x},x\,y\right)$$
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{080} \quad 计算
+$$\lim_{x\to 0 \atop y\to 0} \frac{x\,\ln(1+x\,y)}{x+y}$$
+\par\noindent \textbf{A} \quad 存在
+\par\noindent \textbf{B} \quad 不存在
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%% %% Ex041 - Ex080
+
+
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\subsection{第二节\quad 偏导数}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{081} \quad 名词解释： 二元函数的偏导数。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{082} \quad 名词解释： 三元函数的偏导数。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\newpage
+\par\noindent \textbf{083} \quad "若函数$f$在某点各偏导数都存在， 则$f$在该点一定连续。" 该命题是否为真? 若该命题不真， 
+请举一个反例。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{084} \quad 求
+$$r=\sqrt{x\,^2+y\,^2+z\,^2}$$
+的偏导数。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\par\noindent \textbf{第二节\quad 偏导数（续）（高阶偏导数）}
+\par\noindent \textbf{085} \quad 写出二元函数混合偏导数的定义。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{086} \quad 若$f_{xy}(x,y)$和$f_{yx}(x,y)$都在点$(x_0,y_0)$连续， 则
+$$f_{xy}(x_0,y_0) = f_{yx}(x_0,y_0)$$
+\par\noindent \textbf{A} \quad 正确
+\par\noindent \textbf{B} \quad 错误
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{087} \quad 设$z=f\,(u)$, 方程
+$$u=\phi(u)+\int_y^x p(t)dt$$
+确定$u$是$x$, $y$的函数， 其中$f\,(u)$, $\phi(u)$可微， $p\,(t)$, $\phi'(u)$连续， 
+且$\phi'(u)\neq 1$, 求
+$$p\,(y)\,\frac{\partial z}{\partial x} + p\,(x)\,\frac{\partial z}{\partial y}$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\subsection{第三节\quad 全微分}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{088} \quad 求
+$$z=x\,y+\frac{x}{y}$$
+的全微分。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{088a} \quad 名词解释： 全微分。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{089} \quad 考虑二元函数$f\,(x,y)$的下面四条性质：\par
+1. $f\,(x,y)$在点$(x\,_0,y\,_0)$连续\par
+2. $f\,_x(x,y)$, $f\,_y(x,y)$在点$(x\,_0,y\,_0)$连续\par
+3. $f\,(x,y)$在点$(x\,_0,y\,_0)$可微\par
+4. $f\,_x(x\,_0,y\,_0)$, $f\,_y(x\,_0,y\,_0)$存在\par
+若用"P$\Rightarrow$Q"表示可由性质P推出性质Q， 则下列选项正确的是\hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad 2$\Rightarrow$3$\Rightarrow$1
+\par\noindent \textbf{B} \quad 3$\Rightarrow$2$\Rightarrow$1
+\par\noindent \textbf{C} \quad 3$\Rightarrow$4$\Rightarrow$1
+\par\noindent \textbf{D} \quad 3$\Rightarrow$1$\Rightarrow$4
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\subsection{第四节\quad 复合求导}
+\subsubsection{知识点}
+\subsubsection{练习题}
+
+\par\noindent \textbf{090} \quad 设$z=u\,^2+v\,^2$, 而$u=x+y$, $v=x-y$, 求$\displaystyle\frac{\partial z}{\partial x}$
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{091} \quad 设$z=u\,^2\ln v$, 而$\displaystyle u=\frac{x}{y}$\,, $v=3\,x-2\,y$, 求$\displaystyle\frac{\partial z}{\partial x}$
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{092} \quad 设$z=\arctan (x\,y)$, 而$y=e\,^x$, 求$\displaystyle\frac{\partial z}{\partial x}$
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{093} \quad 求
+$$u=f\left(\,x\,^2-y\,^2, e\,^{x\,y}\,\right)$$
+的一阶偏导数， 其中$f$具有一阶连续偏导数。
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{094} \quad 设$z=f\,(x\,^2+y\,^2)$, 其中$f$具有二阶导数， 求
+$\displaystyle\frac{\partial \,^2z}{\partial x\,^2}$, 
+$\displaystyle\frac{\partial \,^2z}{\partial x\,\partial y}$,
+$\displaystyle\frac{\partial \,^2z}{\partial y\,^2}$
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\subsection{第五节\quad 隐函数求导}
+\subsubsection{知识点}
+\subsubsection{练习题}
+
+\par\noindent \textbf{095} \quad 设$\sin y+e\,^x-x\,y\,^2=0$, 求
+$\displaystyle\frac{d\,y}{d\,x}$
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{096} \quad 设$x+2\,y+z-2\,\sqrt{x\,y\,z}=0$, 求
+$\displaystyle\frac{\partial\,z}{\partial\,x}$,
+$\displaystyle\frac{\partial\,z}{\partial\,y}$
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{097} \quad 如果函数$f\,(x,y)$满足如下条件中的哪一条， 则该函数在点$(x\,_0,y\,_0)$处连续。
+\hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad $\displaystyle \lim_{x\rightarrow x\,_0}f\,(x,y\,_0)=f\,(x\,_0,y\,_0)$, 
+且$\displaystyle\lim_{y\rightarrow y\,_0}f\,(x\,_0,y)=f\,(x\,_0,y\,_0)$
+\par\noindent \textbf{B} \quad $f\,(x,y)$在$(x\,_0,y\,_0)$处沿$L$方向有$\displaystyle \frac{\partial \,f}{\partial \,L}$
+\par\noindent \textbf{C} \quad $f\,(x,y)$有偏导数$f\,_x(x\,_0,y\,_0)$, $f\,_y(x\,_0,y\,_0)$
+\par\noindent \textbf{D} \quad $f\,(x,y)$在$(x\,_0,y\,_0)$处可微分
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{098} \quad 二元函数
+\begin{equation*}    f\,(x,y) =
+ \begin{cases}
+    \displaystyle\frac{xy}{x^2+y^2}, & (x,y)\neq (0,0) \\
+    0,                  & (x,y)=(0,0)
+ \end{cases}                
+\end{equation*}
+在$(0,0)$点处\hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad 连续、 偏导数存在
+\par\noindent \textbf{B} \quad 连续、 偏导数不存在
+\par\noindent \textbf{C} \quad 不连续、 偏导数存在
+\par\noindent \textbf{D} \quad 不连续、 偏导数不存在
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{099} \quad 在平面$x+y+z=1$上求一直线， 使它与直线
+$$\frac{x-1}{1}=\frac{y}{1}=\frac{z+2}{-1}$$
+垂直相交。（调整到“D8-6空间直线”）
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{100} \quad 设$z=z\,(x,y)$由方程$x+y-z=e\,^z$所确定， 求
+$\displaystyle\frac{\partial \,^2 z}{\partial \,x\,\partial \,y}$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\subsection{第六节\quad 几何中的应用}
+\subsubsection{知识点}
+\subsubsection{练习题}
+
+\par\noindent \textbf{101} \quad 求曲线$x\,^2+y\,^2+z\,^2=6$, $x+y+z=0$ 在点$M\,(1,-2,1)$处的切线方程与法平面方程。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{102} \quad 求曲线
+\begin{equation*}    %f\,(x,y) =
+ \begin{cases}
+    x\,^2+y\,^2+z\,^2-3\,x & =0,  \\
+    2\,x-3\,y+5\,z-4 & =0
+ \end{cases}                
+\end{equation*}
+在点$(1,1,1)$处的切线方程与法平面方程。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{103} \quad 如果平面
+$$3\,x+\lambda \,y-3\,z+16=0$$
+与椭球面
+$$3\,x\,^2+y\,^2+z\,^2=16$$
+相切， 求$\lambda$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\subsection{第七节\quad 方向导数与梯度}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{104} \quad 函数
+$$z=3\,x\,^2y - y\,^2$$
+在点$P\,(2,3)$沿曲线
+$$y=x\,^2-1$$
+朝$x$增大方向的方向导数。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{105} \quad 函数
+$$f\,(x,y,z)=x\,^2 + y\,^z$$
+求函数$f$在点$P\,(1,1,1)$沿增加最快方向的方向导数。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\subsection{第八节\quad 极值与最值}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{106} \quad 函数
+$f\,(x,y)$
+在点$(0,0)$的某个邻域内连续， 且
+$$\lim_{x\to 0 \atop y\to 0} \frac{f\,(x,y)-x\,y}{(x\,^2+y\,^2)\,^2} ​=1$$
+则\hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad 点$(0,0)$不是$f\,(x,y)$的极值点
+\par\noindent \textbf{B} \quad 点$(0,0)$是$f\,(x,y)$的极大值点
+\par\noindent \textbf{C} \quad 点$(0,0)$是$f\,(x,y)$的极小值点
+\par\noindent \textbf{D} \quad 根据条件无法判断点$(0,0)$是否为$f\,(x,y)$的极值点
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{107} \quad 求函数
+$f\,(x,y)=x\,^3-y\,^3+3\,x\,^2+3\,y\,^2-9\,x$的极值。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{108} \quad 
+点$(0,0)$是函数$z=x\,^3+y\,^3$的极值点。 \hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad 正确
+\par\noindent \textbf{B} \quad 错误
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{109} \quad 要设计一个容量为$V_0$的长方体开口水箱， 
+问水箱长、宽、高等于多少时， 所用材料最省?
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\section{第十章\quad 重积分}
+\subsection{第一节\quad 二重积分概念}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{110} \quad 函数
+$$ f\,(x,y)=\frac{1}{x-y}$$
+在
+\begin{equation*}    D:
+ \begin{cases}
+    0\leq x\leq 1 &   \\
+    0\leq y\leq 1 & 
+ \end{cases}                
+\end{equation*}
+上二重积分 \hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad 存在
+\par\noindent \textbf{B} \quad 不存在
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{111} \quad 函数
+$$ f\,(x,y)=\frac{x\,^2-y\,^2}{x-y}$$
+在
+\begin{equation*}    D:
+ \begin{cases}
+    0\leq x\leq 1 &   \\
+    0\leq y\leq 1 & 
+ \end{cases}                
+\end{equation*}
+上二重积分 \hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad 存在
+\par\noindent \textbf{B} \quad 不存在
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{112} \quad 判断
+$$ \left|\iint_D f\,(x,y)\,d\,\sigma\right| \leq \iint_D \big |f\,(x,y)\big |\,d\,\sigma$$
+ \hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad 正确
+\par\noindent \textbf{B} \quad 错误
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{113} \quad 判断
+$$ \iint_D (x+y)^2\,d\,\sigma \leq \iint_D (x+y)^3\,d\,\sigma$$
+其中$D: (x-2)^2+(y-1)^2\leq 2$ \hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad 正确
+\par\noindent \textbf{B} \quad 错误
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{114} \quad 判断下列积分的符号
+$$ \iint_D \sqrt[3]{1-x\,^2-y\,^2}\,d\,x\,d\,y$$
+其中$D: x\,^2+y\,^2\leq 4$ \hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad 正号
+\par\noindent \textbf{B} \quad 负号
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{115} \quad 计算
+$$ I=\int_0^{\frac{\pi}{2}}\int_0^{\frac{\pi}{2}}\sin(x+y)\,d\,x\,d\,y$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{116} \quad 估计
+$$ \iint_D\,\frac{d\sigma}{\sqrt{x^2+y^2+2xy+16}}$$
+的值， 其中$D: 0\leq x\leq 1$, $0\leq y\leq 2$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{117} \quad 判断下列积分的符号
+$$ \iint_D \ln \,\left(x\,^2+y\,^2\,\right)\,d\,x\,d\,y$$
+其中$D: a\leq |\,x\,|+|\,y\,|\leq 1$, $0<a<1$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\subsection{第二节\quad 二重积分的计算（1）（直角坐标系）}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{118} \quad 计算
+$$ \iint_D \left(x\,^2+y\,^2\,\right)\,d\,\sigma$$
+其中$D: |\,x\,|\leq 1, |\,y\,|\leq 1$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{119} \quad 计算
+$$ \iint_D \left(\,x\,^3+3\,x\,^2y+y\,^3\,\right)\,d\,\sigma$$
+其中$D: 0\leq \,x\,\leq 1$, $0\leq \,y\,\leq 1$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{120} \quad 计算
+$$ \iint_D \,x\,\sqrt{y\,}\,d\,\sigma$$
+其中$D$是由两条抛物线$y=\sqrt{x\,}$, $y=x\,^2$所围成的闭区域
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%% %% Ex081 - Ex120
+
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{121} \quad 计算
+$$ \iint_D \,x\,y\,^2\,d\,\sigma$$
+其中$D$是由园周$x\,^2+y\,^2=4$及$y$轴所围成的右半闭区域
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{122} \quad 交换积分次序
+$$ \int_0^1 d\,y\int_0^y f\,(x,y)\,d\,x$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{123} \quad 交换积分次序
+$$ \int_0^1 d\,y\int_{-\sqrt{1\,-\,y\,^2}}^{\sqrt{1\,-\,y\,^2}} f\,(\,x,y\,)\,d\,x$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\par\noindent \textbf{第二节\quad 二重积分的计算（2）（极坐标系）} 
+\par\noindent \textbf{124} \quad 计算
+$$ \iint_D \,e\,^{-x\,^2-y\,^2}\,d\,\sigma$$
+其中$D: x\,^2+y\,^2\leq a\,^2$, $a>0$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{125} \quad 计算
+$$ \int_0^{+\infty} \,e\,^{-x\,^2}\,d\,x$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{126} \quad 计算
+$$ \int_0^{2\,a}\,d\,x \int_0^{\sqrt{\,2\,a\,x\,-\,x\,^2}} \left(x\,^2+y\,^2\right)\,d\,y$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{127} \quad 计算
+$$ \int_0^1\,d\,x \int_{x\,^2}^x \left(x\,^2+y\,^2\right)^{-\frac{1}{2}}\,d\,y$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{128} \quad 计算
+$$ \iint_D e\,^{x\,^2+y\,^2}\,d\,\sigma$$
+其中$D$是由圆周$x\,^2+y\,^2=4$所围成的闭区域。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{129} \quad 计算
+$$ \iint_D \ln \left(1+x\,^2+y\,^2\right)\,d\,\sigma$$
+其中$D$是由圆周$x\,^2+y\,^2=1$及坐标轴所围成的在第一象限内的闭区域。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{130} \quad 计算
+$$ \iint_D \frac{x\,^2}{y\,^2}\,d\,\sigma$$
+其中$D$是由直线$x=2$, $y=x$及曲线$x\,y=1$所围成的闭区域。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{131} \quad 计算
+$$ \iint_D \sqrt{x\,^2+y\,^2}\,d\,\sigma$$
+其中$D$是圆形环闭区域$a\,^2\leq x\,^2+y\,^2 \leq b\,^2$, $a>0$, $b>0$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\newpage
+\par\noindent \textbf{第二节\quad 二重积分的计算（3）（换元法）} 
+\par\noindent \textbf{132} \quad 计算
+$$ \iint_D \left(\frac{x\,^2}{a\,^2}+\frac{y\,^2}{b\,^2}\right)\,d\,\sigma$$
+其中$D$是椭圆形闭区域$\displaystyle\frac{x\,^2}{a\,^2}+\frac{y\,^2}{b\,^2} \leq 1$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{133} \quad 计算
+$$ \iint_D \left(x\,y+\cos x\,\sin y\right)\,d\,\sigma$$
+其中$D$是闭区域$-a\leq x\leq a$, $x\leq y\leq a$, $a>0$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{134} \quad 计算
+$$ \iint_D \left(\,y\,^2+3\,x-6\,y+9\,\right)\,d\,\sigma$$
+其中$D$是闭区域$x\,^2+y\,^2\leq R\,^2$, $R>0$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{135} \quad 计算
+$$ \iint_D \left|y-x\,^2\,\right|\,d\,\sigma$$
+其中$D$是闭区域$0\leq x\leq 1$, $0\leq y\leq 1$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{136} \quad 计算
+$$ \iint_D \left(x\,^2-y\,^2\right)\,d\,\sigma$$
+其中$D$是闭区域$0\leq x\leq \pi$, $0\leq y\leq \sin x$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{138} \quad 设$f\,(x)$为连续函数， $f(2)=1$,
+$$ F\,(t)=\int_1^td\,y\int_y^t f\,(x)\,d\,x$$
+求$F'(2)$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{139} \quad 
+$$ \int_0^ad\,y\int_0^y e^{\,m\,(a-x)}\,f\,(x)d\,x
+=
+\int_0^a(a-x)\,e\,^{m\,(a-x)}\,f\,(x)\,d\,x$$
+\hfill (\quad\quad\quad)
+\par\noindent \textbf{A} \quad 正确
+\par\noindent \textbf{B} \quad 错误
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\newpage
+\subsection{第三节\quad 三重积分（1）（直角坐标）}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{139a1} \quad 计算
+$$ \iiint_{\Omega} xy^2z^3\,d\,x\,d\,y\,d\,z$$
+其中$\Omega$是由曲面$z=xy$, 平面$y=x$, $x=1$和$z=0$所围成的闭区域。
+\par\noindent \textbf{ 解答}
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\par\noindent \textbf{139a2} \quad 计算
+$$ \iiint_{\Omega} \frac{d\,x\,d\,y\,d\,z}{(1+x+y+z)^3}$$
+其中$\Omega$是由平面$x=0$, $y=0$, $z=0$和$x+y+z=1$所围成的闭区域。
+\par\noindent \textbf{ 解答}
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\par\noindent \textbf{139a3} \quad 计算
+$$ \iiint_{\Omega} xz\,d\,x\,d\,y\,d\,z$$
+其中$\Omega$是由平面$z=0$, $z=y$, $y=1$和抛物柱面$y=x^2$所围成的闭区域。
+\par\noindent \textbf{ 解答}
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\par\noindent \textbf{139a4} \quad 计算
+$$ \iiint_{\Omega} z\,d\,x\,d\,y\,d\,z$$
+其中$\Omega$是由锥面$z=\sqrt{x^2+y^2}$和$z=1$所围成的闭区域。
+\par\noindent \textbf{ 解答}
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\newpage
+\par\noindent \textbf{第三节\quad 三重积分（2）（柱面坐标）}
+\par\noindent \textbf{139a5} \quad 利用柱面坐标计算
+$$ \iiint_{\Omega} z\,d\,x\,d\,y\,d\,z$$
+其中$\Omega$是由曲面$z=\sqrt{2-x^2-y^2}$和$z=x^2+y^2$所围成的闭区域。
+\par\noindent \textbf{ 解答}
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{139a6} \quad 计算
+$$ \iiint_{\Omega} xy\,d\,v$$
+其中$\Omega$是柱面$x^2+y^2=1$及平面$z=1$, $z=0$, $x=0$, $y=0$所围成的在第一卦限内的闭区域。
+\par\noindent \textbf{ 解答}
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\par\noindent \textbf{139a7} \quad 计算
+$$ \iiint_{\Omega} \left(x^2+y^2\right)\,d\,v$$
+其中$\Omega$是由曲面$4z^2=x^2+y^2$及平面$z=1$所围成的闭区域。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\newpage
+\par\noindent \textbf{第三节\quad 三重积分（3）（球面坐标）}
+\par\noindent \textbf{139a8} \quad 利用球面坐标计算
+$$ \iiint_{\Omega} \left(x^2+y^2+z^2\right)\,d\,x\,d\,y\,d\,z$$
+其中$\Omega$是由球面$x^2+y^2+z^2=1$所围成的闭区域。
+\par\noindent \textbf{ 解答}
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{139a8b1} \quad 计算
+$$ \iiint_{\Omega} \frac{z\,\ln \,(x\,^2+y\,^2+z\,^2+1)}{x\,^2+y\,^2+z\,^2+1}\,d\,v$$
+其中$\Omega$是由球面$x\,^2+y\,^2+z\,^2=1$所围成的闭区域。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+\newpage
+\subsection{第四节\quad 重积分的应用}
+\subsubsection{知识点}
+\subsubsection{练习题}
+
+\par\noindent \textbf{139a9} \quad 求球面$x^2+y^2+z^2=1$含在圆柱面$x^2+y^2=x$内部的那部分面积。
+\par\noindent \textbf{ 解答}
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\par\noindent \textbf{139a10} \quad 求锥面$z=\sqrt{x^2+y^2}$被柱面$z^2=2x$所割下部分的曲面面积。
+\par\noindent \textbf{ 解答}
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\newpage
+\section{第十一章\quad 曲线积分与曲面积分}
+\subsection{第一节\quad 对弧长曲线积分}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{140} \quad 计算
+$$ \int_L (x+y)\,d\,s$$
+其中$L$为连接$(1,0)$及$(0,1)$两点的直线段。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{141} \quad 计算
+$$ \int_L y\,^2\,d\,s$$
+其中$L$为摆线的一拱， $x=a\,(t-\sin t\,)$, $y=a\,(1-\cos t\,)$, $0\leq t \leq 2\,\pi$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{142} \quad 计算
+$$ \int_L (x+y)\,d\,s$$
+其中$L$为连接$(1,0)$, $(0,1)$两点的直线段。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\subsection{第二节\quad 对坐标曲线积分}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{143} \quad 计算
+$$ \int_L (x\,^2-y\,^2)\,d\,x$$
+其中$L$是抛物线$y=x\,^2$上从点 $(0,0)$到点 $(2,4)$的一段弧。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{144} \quad 计算
+$$ \oint_L \frac{(x+y)\,d\,x-(x-y)\,d\,y}{x\,^2+y\,^2}$$
+其中$L$为圆周$x\,^2+y\,^2=a\,^2$, $a>0$, 逆时针方向。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{145} \quad 计算
+$$ \int_L (x+y\,)\,d\,x+(y-x\,)\,d\,y$$
+其中$L$是曲线$x=2t\,^2+t+1$, $y=t\,^2+1$上从点$(1,1)$到点$(4,2)$的一段弧。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{146} \quad 求下列曲线所围成的图形的面积
+$$x=a\cos ^3 t,\quad y=a\sin ^3t$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\subsection{第三节\quad 格林公式}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{147} \quad 计算
+$$ \oint_L \frac{y\,d\,x-x\,d\,y}{2(x\,^2+y\,^2)}$$
+其中$L$为圆周$(x-1)\,^2+y\,^2=2$, 逆时针方向。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{148} \quad 计算
+$$ \int_L \left(2\,x\,y\,^3-y\,^2\cos x\,)\,d\,x+(1-2\,y\,\sin x+3\,x\,^2\,y\,^2\,\right)\,d\,y$$
+其中$L$为抛物线$2\,x=\pi\, y\,^2$上由点$A\,(0,0)$到$\displaystyle B\,\left(\frac{\pi}{2},1\right)$的一段弧。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\newpage
+\subsection{第四节\quad 对面积曲面积分}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{149} \quad 计算
+$$ \int_{\Sigma} \left(\,x\,^2+y\,^2\,\right)\,d\,S$$
+其中$\Sigma$是$z\,^2=3\left(x\,^2+y\,^2\right)$被平面$z=0$和$z=3$所截得的部分。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{150} \quad 计算
+$$ \iint_{\Sigma} \left(\,2xy-2x^2-x+z\,\right)\,d\,S$$
+其中$\Sigma$是平面$2x+2y+z=6$在第一卦限中的部分。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{151} \quad 计算
+$$ \iint_{\Sigma} \left(\,x\,y+y\,z+z\,x\,\right)\,d\,S$$
+其中$\Sigma$是锥面$z=\sqrt{x\,^2+y\,^2}$被柱面$x\,^2+y\,^2=2a\,x$所截得的有限部分。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\newpage
+\subsection{第五节\quad 对坐标曲面积分}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{152} \quad 计算
+$$ \iint_{\Sigma} \,x\,^2y\,^2z\,d\,x\,d\,y$$
+其中$\Sigma$是球面$x\,^2+y\,^2+z\,^2=R\,^2$的下半部分的下侧。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{153} \quad 计算
+$$\oiint_{\Sigma} \,x\,z\,d\,x\,d\,y+\,x\,y\,d\,y\,d\,z+\,y\,z\,d\,z\,d\,x$$
+其中$\Sigma$是平面$x=0$, $y=0$, $z=0$, $x+y+z=1$ 所围成的空间区域的整个边界曲面的外侧。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{154} \quad 计算
+$$\iint_{\Sigma} \,z\,d\,x\,d\,y+\,x\,d\,y\,d\,z+\,y\,d\,z\,d\,x$$
+其中$\Sigma$是柱面$x^2+y^2=1$被平面$z=0$, $z=3$所截得的在第一卦限内的部分的前侧。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\newpage
+\subsection{第六节\quad 高斯公式}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{154a1} \quad 计算曲面积分
+$$\iint_{\Sigma} \,\left(\,x\,^3+y\,^2\,\right)\,d\,y\,d\,z+\,\left(\,y\,^3+z\,^2\,\right)\,d\,z\,d\,x+\,\left(\,z\,^3+x\,^2\,\right)\,d\,x\,d\,y$$
+其中$\Sigma$是上半球面$z=\sqrt{1-x\,^2-y\,^2}$的上侧。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{155} \quad 计算
+$$\oiint_{\Sigma} \,z^2\,d\,x\,d\,y+\,x^2\,d\,y\,d\,z+\,y^2\,d\,z\,d\,x$$
+其中$\Sigma$是平面$x=0$, $y=0$, $z=0$, $x=a$, $y=a$, $z=a$所围成的立体的表面的外侧。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{156} \quad 计算
+$$\oiint_{\Sigma} \,x\,z\,^2\,d\,y\,d\,z+\,(x\,^2\,y-z\,^3)\,d\,z\,d\,x+\,(2\,x\,y+y\,^2\,z)\,d\,x\,d\,y$$
+其中$\Sigma$是由上半球体
+$$0\leq z\leq \sqrt{a\,^2-x\,^2-y\,^2}$$
+和圆盘
+$$x\,^2+y\,^2\leq a\,^2$$
+所围成的封闭立体的外侧面。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{157} \quad 计算
+$$\oiint_{\Sigma} \,4x\,z\,d\,y\,d\,z-\,y\,^2\,d\,z\,d\,x+\,yz\,d\,x\,d\,y$$
+其中$\Sigma$是平面$x=0$, $y=0$, $z=0$, $x=1$, $y=1$, $z=1$所围立体的整个外侧面。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\newpage
+\section{第十二章\quad 无穷级数}
+\subsection{第一节\quad 常数项级数}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{158} \quad 讨论级数的敛散性
+$$\sum_{n=1}^{\infty}\left(\,\sqrt{n+1}-\sqrt{n}\,\right)$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{159} \quad 讨论级数的敛散性
+$$\sum_{n=1}^{\infty}\frac{1}{(2n-1)(2n+1)}$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{160} \quad 讨论级数的敛散性
+$$\sum_{n=1}^{\infty}\sin\frac{n\,\pi}{6}$$
+\par\noindent \textbf{ 积化和差公式}
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\newpage
+\subsection{第二节\quad 数项级数及审敛法}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{161} \quad 讨论级数的敛散性
+$$\sum_{n=1}^{\infty}\frac{1}{2n-1}$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{162} \quad 讨论级数的敛散性
+$$\sum_{n=1}^{\infty}\frac{1}{(n+1)(n+4)}$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{163} \quad 讨论级数的敛散性
+$$\sum_{n=1}^{\infty}\frac{1}{1+a\,^n}, \quad a>0$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{164} \quad 讨论级数的敛散性
+$$\sum_{n=1}^{\infty}\frac{2\,^n\cdot n\,!}{n\,^n}$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{165} \quad 讨论级数的敛散性
+$$\sum_{n=1}^{\infty}\left(\frac{n}{2n+1}\right)^n$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{166} \quad 讨论级数的敛散性
+$$\sum_{n=1}^{\infty} 2\,^n\sin\frac{\pi}{3\,^n}$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\newpage
+\par\noindent \textbf{第二节\quad 数项级数及审敛法（续）（交错级数的审敛法）}
+\par\noindent \textbf{167} \quad 讨论级数的敛散性
+$$\sum_{n=1}^{\infty} \,(-1)\,^{n-1} \frac{n}{3\,^{n-1}}$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{168} \quad 讨论级数的敛散性
+$$\sum_{n=1}^{\infty} \,(-1)\,^{n-1} \,\frac{1}{\ln\,(n+1)}$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{169} \quad 讨论级数的敛散性
+$$\sum_{n=1}^{\infty} \,(-1)\,^{n+1} \,\frac{2\,^{n\,^2}}{n\,!}$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{169a1} \quad 求极限
+$$\lim_{n\rightarrow\infty}\,\frac{5\,^n}{2\,^n\cdot n\,!}$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{169a2} \quad 讨论级数的敛散性
+$$\sum_{n=1}^{\infty} \,\frac{(-1)\,^n }{n-\ln n}$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\newpage
+\subsection{第三节\quad 幂级数}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{170} \quad 求下列级数的收敛区间
+$$\sum_{n=1}^{\infty} \,(-1)\,^n \,\frac{x\,^{2n+1}}{2n+1}$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{171} \quad 求下列级数的收敛区间
+$$\sum_{n=1}^{\infty} \,\frac{(x-5)^n}{\sqrt{n}}$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{172} \quad 求下列级数的和函数
+$$\sum_{n=1}^{\infty} \,n\,x\,^{n-1}$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\newpage
+\subsection{第四节\quad 函数展成幂级数}
+\subsubsection{知识点}
+\subsubsection{练习题}
+\par\noindent \textbf{173} \quad 将双曲正弦函数展开成$x$的幂级数。
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{173a} \quad 将下列函数展开成$x$的幂级数
+$$\frac{e^x-e^{-x}}{2}$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{174} \quad 将下列函数展开成$x$的幂级数
+$$\frac{x}{\sqrt{1+x\,^2}}$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+\newpage
+\par\noindent \textbf{第四节\quad 函数展成幂级数（续）}
+\par\noindent \textbf{175} \quad 将下列函数展开成$(x-1)$的幂级数
+$$\log x$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{176} \quad 将下列函数展开成$(x+4)$的幂级数
+$$\frac {1}{x\,^2+3\,x+2}$$
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+
+%%%%------------------
+%%%%------------------ 练习题 
+\vskip 0.44271\textheight
+
+
+\par\noindent \textbf{177} \quad 将下列函数展开成$x$的幂级数
+$$e\,^x\,\cos x$$
+\par\noindent \textbf{ 借助欧拉公式}
+\par\noindent \textbf{ 解答}
+
+
+
+%%%%------------------ 练习题 
+%%%%------------------
+%%%%------------------ 练习题 
+%%%%------------------
+%%
+\newpage
+%%
+%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 文献索引总目录
+\bibliography{F:/git/secret/d/dt/BD5241BD-F245-4D33-8EDC-99FFCCF722A4.bib}
+%1. \href{http://ds.iris.edu/ds/nodes/dmc/data/}{iris},Incorporated Research Institutions for Seismology (IRIS), 数据集.\par
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 5f73ca99-9b5f-4beb-b404-c67ac8665ede.tex ends here
